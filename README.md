@@ -1,47 +1,74 @@
-# Caso de Teste E2E - Adicionar Fechadura Intelbras FR 210 ao Carrinho
+## Pré-requisitos
 
-## Objetivo
+Antes de começar, certifique-se de ter instalado os seguintes requisitos:
+- [Python 3.11](https://www.python.org/downloads/)
+- [Visual Studio Code (VSCode)](https://code.visualstudio.com/download/)
 
-Validar se a funcionalidade de adicionar a Fechadura Intelbras FR 210 ao carrinho na Loja Intelbras está funcionando corretamente.
 
-## Ambiente
+## Instalação
 
-Navegador Chrome
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/ArthurSantos19/test-case.git
+    ```
 
-## Passos
+2. Navegue até o diretório do projeto:
+    ```bash
+    cd seu-projeto
+    ```
 
-1. **Acesso à Loja Intelbras:**
-   - Navegar até o site da Loja Intelbras [loja.intelbras.com.br](https://loja.intelbras.com.br/).
+3. Crie um ambiente virtual:
+    ```bash
+    python -m venv venv
+    ```
 
-2. **Buscar a Fechadura Intelbras FR 210:**
-   - Utilizando a barra de pesquisa, procurar pela "Fechadura Intelbras FR 210" na loja.
+4. Ative o ambiente virtual (Windows):
+    ```bash
+    .\venv\Scripts\Activate.ps1
+    ```
 
-3. **Selecionar a Fechadura Intelbras FR 210:**
-   - Clicar sobre o resultado correspondente à Fechadura Intelbras FR 210.
+    Ative o ambiente virtual (Linux/Mac):
+    ```bash
+    source venv/bin/activate
+    ```
 
-4. **Adicionar ao Carrinho:**
-   - Uma vez na página da Fechadura Intelbras FR 210, clicar no botão "Adicionar ao Carrinho" ou ação equivalente.
+5. Instale as dependências:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-5. **Validar Adição ao Carrinho:**
-   - Navegar até o carrinho de compras.
-   - Verificar se a Fechadura Intelbras FR 210 está listada no carrinho.
 
-## Critérios de Aceitação
+## Executando Testes
 
-- A Fechadura Intelbras FR 210 foi adicionada ao carrinho com sucesso.
-- O carrinho de compras exibe corretamente a Fechadura Intelbras FR 210.
+### Executar Teste Específico
 
-## Cenários Alternativos
+1. **Selecione o arquivo de teste desejado**
+2. **Clique em Run no Vscode**
 
-- Se o item não puder ser adicionado ao carrinho, evidenciar a mensagem de erro exibida.
-- Se a Fechadura Intelbras FR 210 já estiver no carrinho, garantir que a quantidade seja incrementada.
+---
+---
 
-## Evidências
 
-- Capturas de tela ou gravações de vídeo podem ser utilizadas para evidenciar cada passo e resultado.
+# Teste Automatizado Adição de Produto ao Carrinho - Loja Intelbras
 
-## Notas Adicionais
+## Objetivo do Teste
+Validar a funcionalidade de adicionar a Fechadura Intelbras FR 210 ao carrinho na Loja Intelbras (loja.intelbras.com.br) utilizando uma ferramenta de teste automatizado de ponta a ponta (E2E), preferencialmente executando no navegador Chrome.
 
-- Certifique-se de que o ambiente de teste está configurado corretamente.
-- Anotar o tempo necessário para a execução do teste.
-- Registrar qualquer comportamento inesperado ou problema encontrado.
+## Cenário Testado
+1. **Acessar a loja Intelbras:** Navegar até [loja.intelbras.com.br](https://loja.intelbras.com.br).
+2. **Localizar a Fechadura Intelbras FR 210:** Procurar e selecionar o produto desejado.
+3. **Adicionar ao carrinho:** Simular a adição da Fechadura Intelbras FR 210 ao carrinho.
+4. **Validar a adição ao carrinho:** Confirmar se a Fechadura Intelbras FR 210 está corretamente no carrinho.
+
+## Resultado do Teste
+- **<span style="color: green;">✅ Sucesso:</span>** O teste foi executado com êxito, cumprindo o objetivo de adicionar a Fechadura Intelbras FR 210 ao carrinho.
+
+## Observações
+- A funcionalidade de adição ao carrinho foi verificada e está operando conforme esperado.
+- **<span style="color: orange;">⚠️ Melhoria identificada:</span>** Notou-se um pequeno atraso na renderização do botão "Adicionar ao Carrinho", gerando momentaneamente a exibição como "Comprar" nos primeiros segundos após a seleção do produto.
+
+## Ponto de Melhoria
+- **🔧 Sugestão:** Avaliar a otimização da renderização do botão "Adicionar ao Carrinho" para uma transição mais rápida e consistente. Visando aprimorar a experiência do usuário, evitando confusões durante a interação.
+
+## Conclusão
+O teste automatizado foi concluído com sucesso, garantindo a adição da Fechadura Intelbras FR 210 ao carrinho. Recomenda-se a análise da sugestão de melhoria para otimizar a renderização do botão, visando uma experiência de compra mais fluida e intuitiva para o usuário. 🚀✨
