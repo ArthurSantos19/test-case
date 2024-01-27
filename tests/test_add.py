@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+start_time = time.time()
 # Inicializando o WebDriver do Chrome
 driver = webdriver.Chrome()
 driver.implicitly_wait(5)
@@ -25,7 +26,7 @@ campo_cep.send_keys("88090080")
 botao_submit_cep = driver.find_element(By.XPATH, '//button[@type="submit" and .//img[@src="/arquivos/icon-right-arrow2.svg"]]')
 botao_submit_cep.click()
 
-time.sleep(1)
+time.sleep(2)
 
 # Aguardar até que o campo de pesquisa esteja presente
 campo_input = WebDriverWait(driver, 10).until(
@@ -66,12 +67,20 @@ WebDriverWait(driver, 10).until(
 ver_carrinho = driver.find_element(By.XPATH, '//a[@href="/checkout" and contains(@class, "minicart-checkout") and contains(@class, "button--medium") and contains(@class, "button--black")]')
 ver_carrinho.click()
 
+
 # Validar se a fechadura foi adicionada ao carrinho
 titulo_produto_carrinho = driver.find_element(By.XPATH, '//td[@class="product-name" and contains(@data-bind, "window.cart.loadingItem()")]//a[starts-with(@href, "//loja.intelbras.com.br/fechadura-digital-fr210/p")]')
+
 
 # Verificar se o título do produto na página do carrinho corresponde ao esperado
 assert "Fechadura Digital de Sobrepor Intelbras FR 210" in titulo_produto_carrinho.text, "Produto não encontrado no carrinho"
 print("Produto encontrado no carrinho!")
+
+
+# TEMPO
+end_time = time.time()
+elapsed_time = end_time - start_time
+print(f"Tempo de execução: {elapsed_time} segundos")
 
 # Fechar o navegador
 driver.quit()
