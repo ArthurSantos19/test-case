@@ -34,7 +34,7 @@ Antes de começar, certifique-se de ter instalado os seguintes requisitos:
 
 5. Instale as dependências:
     ```bash
-    pip install -r requirements.txt
+    pip install selenium
     ```
 
 
@@ -44,6 +44,7 @@ Antes de começar, certifique-se de ter instalado os seguintes requisitos:
 
 1. **Selecione o arquivo de teste desejado**
 2. **Clique em Run no Vscode**
+3. **Selecionae Python file**
 
 ---
 ---
