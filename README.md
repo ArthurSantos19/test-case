@@ -37,20 +37,62 @@ Antes de começar, certifique-se de ter instalado os seguintes requisitos:
     pip install selenium
     ```
 
+---
+
+# Informação sobre os testes
+
+## Teste de Inclusão da Fechadura ao Carrinho (test_add)
+
+- **Objetivo:** Validar a adição da Fechadura Intelbras FR 210 ao carrinho.
+- **Cenário Testado:**
+  1. Acessar [loja.intelbras.com.br](https://loja.intelbras.com.br).
+  2. Localizar a Fechadura Intelbras FR 210.
+  3. Adicionar a fechadura ao carrinho.
+  4. Validar a presença da fechadura no carrinho.
+- **Resultado:** Sucesso.
+
+---
+
+## Teste de Inclusão e Incremento no Carrinho (test_add_increment)
+
+- **Objetivo:** Validar a adição e incremento da Fechadura Intelbras FR 210 no carrinho.
+- **Cenário Testado:**
+  1. Acessar [loja.intelbras.com.br](https://loja.intelbras.com.br).
+  2. Localizar a Fechadura Intelbras FR 210.
+  3. Adicionar a fechadura ao carrinho.
+  4. Incrementar a quantidade da fechadura no carrinho.
+  5. Validar a quantidade incrementada no carrinho.
+- **Resultado:** Sucesso.
+
+---
+
+## Teste de Inclusão Responsiva em Tela Mobile (test_responsive_add)
+
+- **Objetivo:** Validar a adição da Fechadura Intelbras FR 210 ao carrinho em uma tela mobile.
+- **Cenário Testado:**
+  1. Acessar [loja.intelbras.com.br](https://loja.intelbras.com.br) em um dispositivo móvel.
+  2. Localizar a Fechadura Intelbras FR 210.
+  3. Adicionar a fechadura ao carrinho.
+  4. Validar a presença da fechadura no carrinho em uma tela mobile.
+- **Resultado:** Sucesso.
+
+
+---
 
 ## Executando Testes
 
-### Executar Teste Específico
 
 1. **Selecione o arquivo de teste desejado**
 2. **Clique em Run no Vscode**
 3. **Selecione Python file**
 
 ---
+
 ---
 
 
-# Teste Automatizado Adição de Produto ao Carrinho - Loja Intelbras
+
+# Relatório de Teste Automatizado Adição de Produto ao Carrinho - Loja Intelbras
 
 ## Objetivo do Teste
 Validar a funcionalidade de adicionar a Fechadura Intelbras FR 210 ao carrinho na Loja Intelbras (loja.intelbras.com.br) utilizando uma ferramenta de teste automatizado de ponta a ponta (E2E), preferencialmente executando no navegador Chrome.
